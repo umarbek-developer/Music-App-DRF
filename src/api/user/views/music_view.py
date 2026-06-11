@@ -19,14 +19,24 @@ class MusicCreateApiView(CreateAPIView):
     queryset = Music.objects.all()
     serializer_class = music_serializer.MusicCreateSerializer
     permission_classes = [IsAuthenticated]
+    
 
 
 
-class MusicUpdateApiView(ListAPIView):
+class MusicUpdateApiView(UpdateAPIView):
     queryset = Music.objects.all()
     serializer_class = music_serializer.MusicCreateSerializer
     permission_classes = [IsAuthenticated]
 
 
+class MusicRetriveApiView(RetrieveAPIView):
+    queryset = Music.objects.all()
+    serializer_class = music_serializer.MusicListSerializer
+    permission_classes = [IsAuthenticated]
 
+
+
+class MusicDestroyApiView(DestroyAPIView):
+    queryset = Music.objects.all()
+    permission_classes = [IsAuthenticated]
 
