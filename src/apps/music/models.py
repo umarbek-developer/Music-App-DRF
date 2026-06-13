@@ -25,7 +25,7 @@ class Music(models.Model):
     picture = models.ImageField(upload_to='pictures/', blank=True, null=True)
     litics = models.TextField(default=0)
     source = models.CharField(blank=True, null=True)
-    music_data = models.FileField(upload_to='musics/', blank=True, null=True)
+    music_data = models.FileField(upload_to='musics/')
 
     def __str__(self):
         return f"{self.name}"
