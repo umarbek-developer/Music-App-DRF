@@ -16,4 +16,10 @@ class MusicCreateSerializer(ModelSerializer):
 
 
 
+class MusicUpdateSerializer(ModelSerializer):
+
+    class Meta:
+        model = Music 
+        fields = ['name', 'is_public', 'picture', 'lirics', 'source', 'playlist']
+
 
